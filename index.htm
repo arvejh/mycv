@@ -1,201 +1,188 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ارزیابی</title>
-
-  <!-- بارگذاری فونت‌ها -->
-  <link href="https://fonts.googleapis.com/css2?family=B+Zar:wght@400;700&display=swap" rel="stylesheet">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azadeh Nikouei - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    /* بارگذاری فونت محلی */
-    @font-face {
-      font-family: 'B Zar';
-      src: url('fonts/Bzar-Regular.ttf') format('truetype');
-      font-weight: normal;
-    }
-
-    @font-face {
-      font-family: 'B Zar';
-      src: url('fonts/Bzar-Bold.ttf') format('truetype');
-      font-weight: bold;
-    }
-
-    /* طراحی صفحه */
     body {
-      font-family: 'B Zar', sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+      color: #fff;
+      min-height: 100vh;
       padding: 20px;
-      direction: rtl; /* راست‌چین کردن تمام صفحه */
-      text-align: right; /* راست‌چین کردن متن‌ها */
     }
-
-    header {
-      text-align: center;
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 0;
-    }
-
     .container {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
-
-    .form-section, .report-section {
+    header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
       margin-bottom: 30px;
     }
-
-    label {
-      display: block;
-      margin: 10px 0 5px;
-      font-family: 'B Zar', sans-serif;
-      font-weight: bold; /* درشت کردن متن */
-      font-size: 18px;   /* بزرگ‌تر کردن اندازه فونت */
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #e1bee7;
+      background-color: #d1c4e9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #6a1b9a;
     }
-
-    .required-field::after {
-      content: "*";
-      color: red;
-      margin-left: 5px;
+    .info h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.2em;
+      color: #fff;
     }
-
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+    .info p {
+      margin: 5px 0;
+      font-size: 1.1em;
+      opacity: 0.9;
     }
-
-    button {
-      padding: 15px 20px; /* افزایش ارتفاع دکمه برای راحتی کلیک */
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: 'B Zar', sans-serif;
-      font-weight: bold; /* برای درشت‌تر کردن کلمه */
-      font-size: 20px; /* افزایش اندازه فونت */
+    section {
+      margin-bottom: 25px;
     }
-
-    button:hover {
-      background-color: #45a049;
+    h2 {
+      color: #e1bee7;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 8px;
+      font-size: 1.5em;
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+    ul {
+      padding-right: 20px;
     }
-
-    table, th, td {
-      border: 1px solid #ddd;
+    li {
+      margin: 10px 0;
+      line-height: 1.6;
     }
-
-    th, td {
-      padding: 10px;
+    .links a {
+      color: #e1bee7;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    .links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    footer {
       text-align: center;
-    }
-
-    th {
-      background-color: #f2f2f2;
+      margin-top: 40px;
+      font-size: 0.9em;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>سیستم ارزیابی عملکرد پیگیری‌های ویژه</h1>
-  </header>
 
   <div class="container">
-    <div class="form-section">
-      <h2>ثبت داده‌های عملکرد واحد</h2>
-      <form id="performance-form">
-        <label for="unit" class="required-field">نام واحد:</label>
-        <input type="text" id="unit" name="unit" required>
 
-        <label for="response-time" class="required-field">درصد پاسخ‌دهی در مهلت:</label>
-        <input type="number" id="response-time" name="response-time" min="0" max="100" required>
+    <!-- Header with photo and personal info -->
+    <header>
+      <div class="profile-img" id="photo-placeholder">
+        Photo
+      </div>
+      <div class="info">
+        <h1>Azadeh Nikouei</h1>
+        <p>Assistant General Manager | Art Researcher</p>
+        <p>My goal is to practically apply my PhD dissertation on "Ekphrasis and Art Criticism" in educational and cultural contexts.</p>
+      </div>
+    </header>
 
-        <label for="quality" class="required-field">کیفیت پاسخ (درصد بدون نیاز به بازنگری):</label>
-        <input type="number" id="quality" name="quality" min="0" max="100" required>
+    <!-- Contact Section -->
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        <li>Address: Unit 7, Shahid Agahi Alley, Shahid Kaboli St., Seyyed Khandan Bridge, Tehran, Iran. 1631715118</li>
+        <li>Phone: +98 910 145 2602</li>
+        <li>Email: <a href="mailto:azadehnikouei@outlook.com" style="color:#e1bee7;">azadehnikouei@outlook.com</a></li>
+        <li class="links">
+          <a href="https://knowledgehouseforcraft.org/Weft/Authors/Azadeh+Nikouei" target="_blank">Personal Website</a>
+          <a href="https://www.linkedin.com/in/azadeh-nikouei" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </section>
 
-        <label for="accuracy" class="required-field">درصد دقت در ارجاع:</label>
-        <input type="number" id="accuracy" name="accuracy" min="0" max="100" required>
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>PhD Candidate in Art Studies</strong> – Tarbiat Modares University, Tehran (Oct 2017 – Present)</li>
+      </ul>
+    </section>
 
-        <button type="submit">ثبت</button>
-      </form>
-    </div>
+    <!-- Experience -->
+    <section>
+      <h2>Professional Experience</h2>
+      <ul>
+        <li><strong>Assistant General Manager (AGM)</strong> – Ministry of Cultural Heritage, Tourism & Handicrafts (MCTH), Iran (2017 – Present)
+          <ul style="margin-top: 5px;">
+            <li>Prepared research proposals for the Silk Road Caravanserai Project</li>
+            <li>Developed a manual coding method for the International Seal of Excellence</li>
+            <li>Authored three books: "Definitions of 299 Handicraft Disciplines", "Iranian Handicrafts and Traditional Arts" (Persian & English editions)</li>
+            <li>Supervised documentation of handicrafts identification</li>
+            <li>Member of the Technical Committee of Handicrafts at MCTH</li>
+            <li>Conducted case studies on traditional Iranian handmade dolls</li>
+          </ul>
+        </li>
+        <li><strong>Art Teacher</strong> – ASD Training Center, "Faragiran-e Marzi" Institution (2016–2017)
+          <ul style="margin-top: 5px;">
+            <li>Taught art projects including tile work, mask making, traditional Iranian doll crafting, recycling non-biodegradable materials, and hand printing</li>
+            <li>Designed inclusive, hands-on creative activities for students with autism spectrum disorder</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
 
-    <div class="report-section">
-      <h2>گزارش عملکرد واحدها</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>نام واحد</th>
-            <th>پاسخ‌دهی در مهلت</th>
-            <th>کیفیت پاسخ</th>
-            <th>دقت ارجاع</th>
-            <th>امتیاز کل</th>
-          </tr>
-        </thead>
-        <tbody id="performance-report">
-          <!-- گزارش‌ها اینجا نمایش داده می‌شود -->
-        </tbody>
-      </table>
-    </div>
+    <!-- Skills & Languages -->
+    <section>
+      <h2>Skills & Languages</h2>
+      <ul>
+        <li><strong>Languages:</strong> Persian (Native), English (Advanced), Italian (Intermediate), Russian (Elementary)</li>
+        <li><strong>Skills:</strong> Art Research, Ekphrastic Analysis, Teaching, Project Management, Craft Documentation, Critical Writing</li>
+      </ul>
+    </section>
+
+    <!-- Awards -->
+    <section>
+      <h2>Awards & Certifications</h2>
+      <ul>
+        <li>Multiple poetry awards</li>
+        <li>Certificates in art studies and exhibition curation</li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2025 Azadeh Nikouei | Designed with passion for art and culture
+    </footer>
+
   </div>
 
   <script>
-    document.getElementById('performance-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const unit = document.getElementById('unit').value;
-      const responseTime = document.getElementById('response-time').value;
-      const quality = document.getElementById('quality').value;
-      const accuracy = document.getElementById('accuracy').value;
-
-      const totalScore = (responseTime * 0.4) + (quality * 0.3) + (accuracy * 0.2);
-
-      const data = new FormData();
-      data.append('unit', unit);
-      data.append('response_time', responseTime);
-      data.append('quality', quality);
-      data.append('accuracy', accuracy);
-      data.append('total_score', totalScore);
-
-      fetch('save_performance.php', {  // ارسال به فایل PHP
-        method: 'POST',
-        body: data
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          alert('داده‌ها با موفقیت ذخیره شدند');
-        } else {
-          alert('خطا در ذخیره داده‌ها');
-        }
-      });
-
-      const tableRow = `<tr>
-        <td>${unit}</td>
-        <td>${responseTime}%</td>
-        <td>${quality}%</td>
-        <td>${accuracy}%</td>
-        <td>${totalScore}</td>
-      </tr>`;
-
-      document.getElementById('performance-report').innerHTML += tableRow;
-
-      document.getElementById('performance-form').reset();
-    });
+    // Optional: Replace placeholder with actual image if hosted online
+    // Uncomment and replace URL below if you have an image link:
+    /*
+    const img = document.createElement('img');
+    img.src = 'https://example.com/your-photo.jpg'; // ← Replace with your image URL
+    img.alt = 'Azadeh Nikouei';
+    document.getElementById('photo-placeholder').innerHTML = '';
+    document.getElementById('photo-placeholder').appendChild(img);
+    */
   </script>
+
 </body>
 </html>
