@@ -9,58 +9,60 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #6a1b9a, #9c27b0);
-      color: #fff;
+      background-color: #ffffff;
+      color: #333;
       min-height: 100vh;
       padding: 20px;
     }
     .container {
       max-width: 900px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: #fff;
       border-radius: 15px;
       padding: 30px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eee;
     }
     header {
       display: flex;
       align-items: center;
       gap: 30px;
       margin-bottom: 30px;
+      flex-wrap: wrap;
     }
     .profile-img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
+      border: 4px solid #6a1b9a; /* قاب بنفش تیره */
+      overflow: hidden;
+      background-color: #f5f5f5;
+    }
+    .profile-img img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border: 4px solid #e1bee7;
-      background-color: #d1c4e9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      color: #6a1b9a;
     }
     .info h1 {
-      margin: 0 0 10px 0;
-      font-size: 2.2em;
-      color: #fff;
+      margin: 0 0 8px 0;
+      font-size: 2.1em;
+      color: #6a1b9a;
     }
     .info p {
-      margin: 5px 0;
-      font-size: 1.1em;
-      opacity: 0.9;
+      margin: 6px 0;
+      font-size: 1.05em;
+      color: #444;
+      line-height: 1.5;
     }
     section {
       margin-bottom: 25px;
     }
     h2 {
-      color: #e1bee7;
-      border-bottom: 2px solid #ce93d8;
-      padding-bottom: 8px;
-      font-size: 1.5em;
+      color: #6a1b9a;
+      border-bottom: 2px solid #e1bee7;
+      padding-bottom: 6px;
+      font-size: 1.45em;
+      margin-top: 20px;
     }
     ul {
       padding-right: 20px;
@@ -68,22 +70,22 @@
     li {
       margin: 10px 0;
       line-height: 1.6;
+      color: #555;
     }
     .links a {
-      color: #e1bee7;
+      color: #6a1b9a;
       text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
+      margin: 0 10px 0 0;
+      display: inline-block;
     }
     .links a:hover {
-      color: #fff;
       text-decoration: underline;
     }
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      opacity: 0.7;
+      color: #888;
     }
   </style>
 </head>
@@ -93,13 +95,13 @@
 
     <!-- Header with photo and personal info -->
     <header>
-      <div class="profile-img" id="photo-placeholder">
-        Photo
+      <div class="profile-img">
+        <img src="man.jpg" alt="Azadeh Nikouei">
       </div>
       <div class="info">
         <h1>Azadeh Nikouei</h1>
-        <p>Assistant General Manager | Art Researcher</p>
-        <p>My goal is to practically apply my PhD dissertation on "Ekphrasis and Art Criticism" in educational and cultural contexts.</p>
+        <p>Assistant General Manager | Art Researcher | PhD Candidate in Art Studies</p>
+        <p>Born in 1983 in Mahallat, Iran. My research focuses on ekphrasis and its critical role in art criticism.</p>
       </div>
     </header>
 
@@ -107,9 +109,9 @@
     <section>
       <h2>Contact</h2>
       <ul>
-        <li>Address: Unit 7, Shahid Agahi Alley, Shahid Kaboli St., Seyyed Khandan Bridge, Tehran, Iran. 1631715118</li>
-        <li>Phone: +98 910 145 2602</li>
-        <li>Email: <a href="mailto:azadehnikouei@outlook.com" style="color:#e1bee7;">azadehnikouei@outlook.com</a></li>
+        <li>📍 Tehran, Iran</li>
+        <li>📱 +98 910 145 2602</li>
+        <li>✉️ <a href="mailto:azadehnikouei@outlook.com">azadehnikouei@outlook.com</a></li>
         <li class="links">
           <a href="https://knowledgehouseforcraft.org/Weft/Authors/Azadeh+Nikouei" target="_blank">Personal Website</a>
           <a href="https://www.linkedin.com/in/azadeh-nikouei" target="_blank">LinkedIn</a>
@@ -121,28 +123,23 @@
     <section>
       <h2>Education</h2>
       <ul>
-        <li><strong>PhD Candidate in Art Studies</strong> – Tarbiat Modares University, Tehran (Oct 2017 – Present)</li>
+        <li><strong>PhD Candidate in Art Studies</strong> – Tarbiat Modares University, Tehran (2015 – Present)<br>
+          <em>Thesis: “Ekphrasis and its critical role in art criticism”</em></li>
+        <li><strong>MA in Handicraft and Traditional Art</strong> – Alzahra University, Tehran (2011)</li>
+        <li><strong>BA in Handicraft and Traditional Art</strong> – Shahrekord University (2007)</li>
       </ul>
     </section>
 
-    <!-- Experience -->
+    <!-- Professional Experience -->
     <section>
       <h2>Professional Experience</h2>
       <ul>
-        <li><strong>Assistant General Manager (AGM)</strong> – Ministry of Cultural Heritage, Tourism & Handicrafts (MCTH), Iran (2017 – Present)
-          <ul style="margin-top: 5px;">
-            <li>Prepared research proposals for the Silk Road Caravanserai Project</li>
-            <li>Developed a manual coding method for the International Seal of Excellence</li>
-            <li>Authored three books: "Definitions of 299 Handicraft Disciplines", "Iranian Handicrafts and Traditional Arts" (Persian & English editions)</li>
-            <li>Supervised documentation of handicrafts identification</li>
-            <li>Member of the Technical Committee of Handicrafts at MCTH</li>
-            <li>Conducted case studies on traditional Iranian handmade dolls</li>
-          </ul>
-        </li>
-        <li><strong>Art Teacher</strong> – ASD Training Center, "Faragiran-e Marzi" Institution (2016–2017)
-          <ul style="margin-top: 5px;">
-            <li>Taught art projects including tile work, mask making, traditional Iranian doll crafting, recycling non-biodegradable materials, and hand printing</li>
-            <li>Designed inclusive, hands-on creative activities for students with autism spectrum disorder</li>
+        <li><strong>Assistant General Manager</strong> – Ministry of Cultural Heritage, Tourism & Handicrafts (MCTH), Iran (2015 – Present)
+          <ul style="margin-top: 6px;">
+            <li>Contributed to national projects and publications on Iranian traditional arts</li>
+            <li>Specialized in two-faced fine Moarragh (wood marquetry)</li>
+            <li>Conducted research and workshops on traditional Iranian handmade dolls</li>
+            <li>Active in documentation and promotion of intangible cultural heritage</li>
           </ul>
         </li>
       </ul>
@@ -153,36 +150,16 @@
       <h2>Skills & Languages</h2>
       <ul>
         <li><strong>Languages:</strong> Persian (Native), English (Advanced), Italian (Intermediate), Russian (Elementary)</li>
-        <li><strong>Skills:</strong> Art Research, Ekphrastic Analysis, Teaching, Project Management, Craft Documentation, Critical Writing</li>
+        <li><strong>Expertise:</strong> Art Research, Ekphrastic Analysis, Traditional Iranian Crafts (Moarragh, Doll-making), Academic Writing, Cultural Project Management</li>
       </ul>
     </section>
 
-    <!-- Awards -->
-    <section>
-      <h2>Awards & Certifications</h2>
-      <ul>
-        <li>Multiple poetry awards</li>
-        <li>Certificates in art studies and exhibition curation</li>
-      </ul>
-    </section>
-
+    <!-- Footer -->
     <footer>
-      &copy; 2025 Azadeh Nikouei | Designed with passion for art and culture
+      &copy; 2025 Azadeh Nikouei | Designed with passion for art and heritage
     </footer>
 
   </div>
-
-  <script>
-    // Optional: Replace placeholder with actual image if hosted online
-    // Uncomment and replace URL below if you have an image link:
-    /*
-    const img = document.createElement('img');
-    img.src = 'https://example.com/your-photo.jpg'; // ← Replace with your image URL
-    img.alt = 'Azadeh Nikouei';
-    document.getElementById('photo-placeholder').innerHTML = '';
-    document.getElementById('photo-placeholder').appendChild(img);
-    */
-  </script>
 
 </body>
 </html>
