@@ -9,20 +9,23 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #6a1b9a, #9c27b0);
-      color: #fff;
+      /* گرادینت خاکستری کمرنگ به بنفش ملایم */
+      background: linear-gradient(135deg, #f5f5f5, #d1c4e9);
+      color: #111111; /* رنگ پایه متن‌ها: سیاه */
       min-height: 100vh;
       padding: 20px;
     }
     .container {
       max-width: 900px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.1);
+      /* پس‌زمینه نیمه‌شفاف سفید برای خوانایی عالی متن سیاه */
+      background-color: rgba(255, 255, 255, 0.85);
       border-radius: 15px;
       padding: 30px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(106, 27, 154, 0.15);
+      color: #111111;
     }
     header {
       display: flex;
@@ -31,43 +34,42 @@
       margin-bottom: 30px;
     }
     
-    /* --- تغییرات اصلی برای عکس دایره‌ای و بدون خط تیز --- */
+    /* --- قاب عکس مربعی --- */
     .profile-img {
       width: 150px;
       height: 150px;
-      border-radius: 50%; /* دایره کامل */
-      overflow: hidden; /* هر چیزی بیرون از دایره را برش می‌زند */
-      background-color: #d1c4e9;
+      border-radius: 8px; /* مربع با گوشه‌های کمی گرد برای زیبایی */
+      overflow: hidden;
+      background-color: #f3e5f5;
       display: flex;
       align-items: center;
       justify-content: center;
-      /* حذف بردر تیز و جایگزینی با سایه نرم و محو */
-      border: none; 
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
     .profile-img img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* عکس را بدون کشیدگی، کل دایره را پر می‌کند */
+      object-fit: cover; /* پر کردن کامل قاب مربعی بدون دفرمه شدن عکس */
       display: block;
     }
-    /* --------------------------------------------------- */
+    /* ------------------- */
 
     .info h1 {
       margin: 0 0 10px 0;
       font-size: 2.2em;
-      color: #fff;
+      color: #000000; /* سیاه خالص برای نام */
     }
     .info p {
       margin: 5px 0;
       font-size: 1.1em;
-      opacity: 0.9;
+      color: #212121; /* خاکستری بسیار تیره (نزدیک به سیاه) برای توضیحات */
     }
     section {
       margin-bottom: 25px;
     }
     h2 {
-      color: #e1bee7;
+      color: #6a1b9a; /* بنفش تیره برای تیترها جهت حفظ هماهنگی تم */
       border-bottom: 2px solid #ce93d8;
       padding-bottom: 8px;
       font-size: 1.5em;
@@ -78,22 +80,23 @@
     li {
       margin: 10px 0;
       line-height: 1.6;
+      color: #111111;
     }
     .links a {
-      color: #e1bee7;
+      color: #6a1b9a; /* لینک‌های بنفش */
       text-decoration: none;
       margin: 0 10px;
       transition: color 0.3s;
     }
     .links a:hover {
-      color: #fff;
+      color: #4a148c; /* بنفش تیره‌تر هنگام هاور */
       text-decoration: underline;
     }
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      opacity: 0.7;
+      color: #333333;
     }
   </style>
 </head>
@@ -104,7 +107,6 @@
     <!-- Header with photo and personal info -->
     <header>
       <div class="profile-img">
-        <!-- عکس شما در اینجا قرار می‌گیرد -->
         <img src="azadeh.jpg" alt="Azadeh Nikouei">
       </div>
       <div class="info">
@@ -120,7 +122,7 @@
       <ul>
         <li>Address: Unit 7, Shahid Agahi Alley, Shahid Kaboli St., Seyyed Khandan Bridge, Tehran, Iran. 1631715118</li>
         <li>Phone: +98 910 145 2602</li>
-        <li>Email: <a href="mailto:azadehnikouei@outlook.com" style="color:#e1bee7;">azadehnikouei@outlook.com</a></li>
+        <li>Email: <a href="mailto:azadehnikouei@outlook.com" style="color:#6a1b9a;">azadehnikouei@outlook.com</a></li>
         <li class="links">
           <a href="https://knowledgehouseforcraft.org/Weft/Authors/Azadeh+Nikouei" target="_blank">Personal Website</a>
           <a href="https://www.linkedin.com/in/azadeh-nikouei" target="_blank">LinkedIn</a>
