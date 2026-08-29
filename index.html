@@ -9,22 +9,20 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      /* گرادینت خاکستری کمرنگ به بنفش ملایم */
-      background: linear-gradient(135deg, #f5f5f5, #d1c4e9);
-      color: #111111; /* رنگ پایه متن‌ها: سیاه */
+      background: linear-gradient(135deg, #f5f5dc, #81c784); /* Bone to Green gradient */
+      color: #111111; /* Black text for readability */
       min-height: 100vh;
       padding: 20px;
     }
     .container {
       max-width: 900px;
       margin: auto;
-      /* پس‌زمینه نیمه‌شفاف سفید برای خوانایی عالی متن سیاه */
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(255, 255, 255, 0.85); /* Opaque white for black text readability */
       border-radius: 15px;
       padding: 30px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(106, 27, 154, 0.15);
+      border: 1px solid rgba(46, 125, 50, 0.3);
       color: #111111;
     }
     header {
@@ -33,44 +31,35 @@
       gap: 30px;
       margin-bottom: 30px;
     }
-    
-    /* --- قاب عکس مربعی --- */
     .profile-img {
       width: 150px;
       height: 150px;
-      border-radius: 8px; /* مربع با گوشه‌های کمی گرد برای زیبایی */
-      overflow: hidden;
-      background-color: #f3e5f5;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #4caf50;
+      background-color: #e8f5e9;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: none;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      font-size: 24px;
+      color: #1b5e20;
     }
-    .profile-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* پر کردن کامل قاب مربعی بدون دفرمه شدن عکس */
-      display: block;
-    }
-    /* ------------------- */
-
     .info h1 {
       margin: 0 0 10px 0;
       font-size: 2.2em;
-      color: #000000; /* سیاه خالص برای نام */
+      color: #000000; /* Pure black for the name */
     }
     .info p {
       margin: 5px 0;
       font-size: 1.1em;
-      color: #212121; /* خاکستری بسیار تیره (نزدیک به سیاه) برای توضیحات */
+      color: #212121; /* Very dark gray/black for description */
     }
     section {
       margin-bottom: 25px;
     }
     h2 {
-      color: #6a1b9a; /* بنفش تیره برای تیترها جهت حفظ هماهنگی تم */
-      border-bottom: 2px solid #ce93d8;
+      color: #1b5e20; /* Dark green for section headers */
+      border-bottom: 2px solid #4caf50;
       padding-bottom: 8px;
       font-size: 1.5em;
     }
@@ -83,13 +72,23 @@
       color: #111111;
     }
     .links a {
-      color: #6a1b9a; /* لینک‌های بنفش */
+      color: #2e7d32; /* Green for links */
       text-decoration: none;
       margin: 0 10px;
       transition: color 0.3s;
     }
     .links a:hover {
-      color: #4a148c; /* بنفش تیره‌تر هنگام هاور */
+      color: #1b5e20;
+      text-decoration: underline;
+    }
+    /* استایل برای تمام لینک‌های داخل متن و لیست */
+    a.inline-link {
+      color: #2e7d32;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a.inline-link:hover {
+      color: #1b5e20;
       text-decoration: underline;
     }
     footer {
@@ -106,14 +105,13 @@
 
     <!-- Header with photo and personal info -->
     <header>
-      <div class="profile-img">
-        <img src="azadeh.jpg" alt="Azadeh Nikouei">
+      <div class="profile-img" id="photo-placeholder">
+        Photo
       </div>
       <div class="info">
         <h1>Azadeh Nikouei</h1>
-        <p>Assistant General Manager | Art Researcher</p>
-        <p>A Member of KHC (Khowledge House for Craft) Board<p>
-        <p>is to practically apply my PhD dissertation on "Ekphrasis and Art Criticism" in educational and cultural contexts.</p>
+        <p>Assistant General Manager | Art & Craft Researcher</p>
+        <p>My goal is to practically apply my PhD dissertation on "Ekphrasis and Art Criticism" in educational and cultural contexts.</p>
       </div>
     </header>
 
@@ -123,11 +121,12 @@
       <ul>
         <li>Address: Unit 7, Shahid Agahi Alley, Shahid Kaboli St., Seyyed Khandan Bridge, Tehran, Iran. 1631715118</li>
         <li>Phone: +98 910 145 2602</li>
-        <li>Email: <a href="mailto:azadehnikouei@outlook.com" style="color:#6a1b9a;">azadehnikouei@outlook.com</a></li>
+        <li>Email: <a href="mailto:azadehnikouei@outlook.com" class="inline-link">azadehnikouei@outlook.com</a></li>
+        <li>Academic Email: <a href="mailto:a.niouei@modares.ac.ir" class="inline-link">a.niouei@modares.ac.ir</a></li>
         <li class="links">
-          <a href="https://knowledgehouseforcraft.org/Weft/Authors/Azadeh+Nikouei" target="_blank">Professional Info on Website</a>
-          <a href="https://www.linkedin.com/in/azadeh-nikouei" target="_blank">My LinkedIn</a>
-          <a href="https://knowledgehouseforcraft.org/Publications/Nikouei+2023+-+IRAN+Handicrafts+%26+Traditional+Arts.pdf" target="_blank">Compiled Booklet</a>
+        <a href="https://knowledgehouseforcraft.org/Weft/Authors/Azadeh+Nikouei" target="_blank">Non-personal professional Website</a>
+        <a href="https://www.linkedin.com/in/azadeh-nikouei" target="_blank">LinkedIn</a>
+        <a href="https://knowledgehouseforcraft.org/Warp/IRAN+Handicrafts+%26+Traditional+Arts"_blank">IRAN Handicrafts & Traditional Arts</a>    
         </li>
       </ul>
     </section>
@@ -151,7 +150,10 @@
             <li>Authored three books: "Definitions of 299 Handicraft Disciplines", "Iranian Handicrafts and Traditional Arts" (Persian & English editions)</li>
             <li>Supervised documentation of handicrafts identification</li>
             <li>Member of the Technical Committee of Handicrafts at MCTH</li>
-            <li>Conducted case studies on traditional Iranian handmade dolls</li>
+            <li>Conducted case study on <a href="https://ejournal.usm.my/wacanaseni/article/view/ws-vol15-2016-2" target="_blank" class="inline-link">Iranian traditional handmade dolls (2016)</a></li>
+            <li>A case study on <a href="https://journal.alzahra.ac.ir/article_2125_d1e0a73a214eea05942cc4fd05d7819f.pdf" target="_blank" class="inline-link">Taj Mahal's Hidden Symbols (2016)</a></li>
+            <li>Conducted case study on <a href="https://goljaam.icsa.ir/article-1-174-en.html" target="_blank" class="inline-link">Jewish carpets (2017)</a></li>
+            <li>A paper on the pair of <a href="https://www.researchgate.net/publication/411215178_The_Ardabil_Carpets_From_the_Veneration_of_Classical_Wholeness_to_the_Modern_Logic_of_Fragmentation_and_Loss" target="_blank" class="inline-link">Ardabil Carpets (2026)</a>, referenced by Roberto Luis Asconiga Skare in <em>Más allá del giro ontológico</em> on the Zenodo platform (<a href="https://zenodo.org/records/22035293" target="_blank" class="inline-link">View Record</a>).</li>
           </ul>
         </li>
         <li><strong>Art Teacher</strong> – ASD Training Center, "Faragiran-e Marzi" Institution (2016–2017)
@@ -186,6 +188,18 @@
     </footer>
 
   </div>
+
+  <script>
+    // Optional: Replace placeholder with actual image if hosted online
+    // Uncomment and replace URL below if you have an image link:
+    /*
+    const img = document.createElement('img');
+    img.src = 'https:azadeh.jpg'; // ← Replace with your image URL
+    img.alt = 'Azadeh Nikouei';
+    document.getElementById('photo-placeholder').innerHTML = '';
+    document.getElementById('photo-placeholder').appendChild(img);
+    */
+  </script>
 
 </body>
 </html>
